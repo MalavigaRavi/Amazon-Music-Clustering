@@ -165,31 +165,6 @@ Cluster quality evaluated using:
 - Silhouette Score
 
 ---
-
-# Project Structure
-
-```
-Amazon-Music-Clustering/
-
-│
-├── Dataset/
-│      single_genre_artists.csv
-│
-├── Notebook/
-│      Amazon_Music_Clustering.ipynb
-│
-├── Images/
-│      Elbow.png
-│      PCA.png
-│      Cluster.png
-│
-├── README.md
-│
-└── requirements.txt
-```
-
----
-
 # Installation
 
 ```bash
