@@ -1,180 +1,264 @@
-🎵 Amazon Music Grouping
-📌 Project Synopsis
+# 🎵 Amazon Music Clustering using Machine Learning
 
-In this project, songs from Amazon Music are automatically grouped into meaningful clusters according to their audio characteristics using unsupervised machine learning. The model finds natural song groupings by identifying patterns in musical characteristics like energy, danceability, tempo, and acousticness rather than depending on manually assigned genres.
+## 📌 Project Overview
 
-Data cleaning, feature engineering, clustering, evaluation, and visualization are all included in the project's demonstration of a full data science workflow.
+This project analyzes Amazon Music song data using Unsupervised Machine Learning techniques to discover hidden patterns among songs based on their audio features.
 
-## 🚀 Objectives
-
-* Automatically group similar songs without using genre labels
-* Discover hidden patterns in music audio features
-* Build a foundation for recommendation systems and playlist generation
+The project performs data cleaning, exploratory data analysis, feature engineering, dimensionality reduction, and clustering using multiple clustering algorithms.
 
 ---
 
-## 🧠 Business Use Cases
+## 🎯 Objective
 
-* **Personalized Playlists**: Automatically generate playlists with similar-sounding songs
-* **Music Recommendation Systems**: Suggest songs based on user listening patterns
-* **Artist Analysis**: Help artists identify competing songs with similar sound profiles
-* **Market Segmentation**: Understand listener behavior across different music clusters
+To group similar songs into clusters based on musical characteristics such as:
 
----
+- Danceability
+- Energy
+- Loudness
+- Acousticness
+- Speechiness
+- Tempo
+- Instrumentalness
+- Liveness
+- Valence
+- Popularity
 
-## Dataset
+These clusters can be used for:
 
-**File:** `single_genre_artists.csv`
-
-### Features Used
-
-* danceability
-* energy
-* loudness
-* speechiness
-* acousticness
-* instrumentalness
-* liveness
-* valence
-* tempo
-* duration_ms
-
-### Reference Columns (not used for clustering)
-
-* track_id
-* track_name
-* artist_name
+- Music Recommendation Systems
+- Playlist Generation
+- Genre Discovery
+- User Personalization
+- Music Trend Analysis
 
 ---
 
-## 🛠️ Technologies & Libraries
+# Dataset
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Seaborn
-* Streamlit (for interactive app)
+**Dataset Name**
 
----
+single_genre_artists.csv
 
-## 🔍 Project Workflow
+Dataset contains approximately:
 
-### 1. Data Exploration & Cleaning
+- 95,836 Songs
+- 23 Features
 
-* Loaded dataset using Pandas
-* Removed duplicates and unnecessary columns
-* Checked for missing values
+### Features
 
-### 2. Feature Selection
-
-Selected audio features that describe rhythm, mood, and intensity of songs.
-
-### 3. Data Scaling
-
-Used **StandardScaler** to normalize feature ranges for distance-based clustering.
-
-### 4. Clustering Algorithm
-
-Applied **K-Means Clustering** to group songs into clusters.
-
-### 5. Model Evaluation
-
-Evaluated clustering quality using:
-
-* Silhouette Score
-* Davies-Bouldin Index
-* Inertia (Elbow Method)
-
-### 6. Dimensionality Reduction
-
-Used **PCA** to visualize clusters in two dimensions.
-
-### 7. Visualization & Interpretation
-
-Generated scatter plots, bar charts, and cluster summaries to interpret cluster characteristics.
+- Song ID
+- Song Name
+- Artist ID
+- Artist Name
+- Popularity
+- Duration
+- Explicit
+- Release Date
+- Danceability
+- Energy
+- Loudness
+- Speechiness
+- Acousticness
+- Instrumentalness
+- Liveness
+- Valence
+- Tempo
+- Followers
+- Genre
+- Artist Popularity
 
 ---
 
-## 📈 Results
+# Technologies Used
 
-The model successfully grouped songs into distinct clusters such as:
-
-* High-energy dance tracks
-* Acoustic and calm songs
-* Instrumental tracks
-* Balanced pop-style music
-
-These clusters can be used for playlist generation and music discovery.
-
----
-
-## 🧪 Evaluation Metrics
-
-| Metric               | Purpose                                          |
-| -------------------- | ------------------------------------------------ |
-| Silhouette Score     | Measures how well songs fit within their cluster |
-| Davies-Bouldin Index | Measures cluster separation                      |
-| Inertia              | Measures compactness of clusters                 |
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- SciPy
+- Visual Studio
 
 ---
 
-## Project Structure
+# Machine Learning Algorithms
+
+### K-Means Clustering
+
+Used to create clusters of similar songs.
+
+---
+
+### DBSCAN
+
+Density-based clustering to identify outliers and dense regions.
+
+---
+
+### Hierarchical Clustering
+
+Used to understand relationships between clusters using dendrograms.
+
+---
+
+### PCA (Principal Component Analysis)
+
+Used to reduce dimensions and visualize clusters.
+
+---
+
+# Project Workflow
+
+1. Import Libraries
+2. Load Dataset
+3. Data Cleaning
+4. Missing Value Analysis
+5. Duplicate Removal
+6. Feature Engineering
+7. Data Scaling
+8. Exploratory Data Analysis
+9. K-Means Clustering
+10. Elbow Method
+11. Silhouette Score Evaluation
+12. PCA Visualization
+13. DBSCAN
+14. Hierarchical Clustering
+15. Cluster Interpretation
+
+---
+
+# Exploratory Data Analysis
+
+Performed:
+
+- Dataset Information
+- Statistical Summary
+- Missing Values
+- Duplicate Records
+- Data Types
+- Correlation Analysis
+- Feature Distribution
+- Outlier Detection
+
+---
+
+# Feature Engineering
+
+Converted:
+
+Release Date
+
+↓
+
+Year
+
+Used only numerical audio features for clustering.
+
+---
+
+# Evaluation
+
+Cluster quality evaluated using:
+
+- Elbow Method
+- Silhouette Score
+
+---
+
+# Project Structure
 
 ```
 Amazon-Music-Clustering/
+
 │
-├── data/
-│   └── single_genre_artists.csv
+├── Dataset/
+│      single_genre_artists.csv
 │
-├── notebooks/
-│   └── amazon_music_clustering.ipynb
+├── Notebook/
+│      Amazon_Music_Clustering.ipynb
 │
-├── app/
-│   └── streamlit_app.py
+├── Images/
+│      Elbow.png
+│      PCA.png
+│      Cluster.png
 │
-├── outputs/
-│   └── clustered_amazon_music.csv
+├── README.md
 │
-└── README.md
+└── requirements.txt
 ```
 
 ---
 
-## ▶️ How to Run the Project
+# Installation
 
-### 1. Clone Repository
-
-```
-git clone https://github.com/your-username/amazon-music-clustering.git
-cd amazon-music-clustering
+```bash
+git clone https://github.com/yourusername/Amazon-Music-Clustering.git
 ```
 
-### 2. Install Dependencies
-
-```
-pip install pandas numpy matplotlib seaborn scikit-learn streamlit
+```bash
+cd Amazon-Music-Clustering
 ```
 
-### 3. Run Jupyter Notebook
-
+```bash
+pip install -r requirements.txt
 ```
+
+---
+
+# Run
+
+```bash
 jupyter notebook
 ```
 
-Open `amazon_music_clustering.ipynb`
+Open
 
-### 4. Run Streamlit App (Optional)
+Amazon_Music_Clustering.ipynb
+
+Run all cells.
+
+---
+
+# Libraries
 
 ```
-streamlit run app/streamlit_app.py
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
 ```
 
 ---
 
-## 📷 Sample Visualizations
+# Future Improvements
 
-* Elbow Method Plot
-* PCA Cluster Scatter Plot
-* Cluster Feature Heatmap
+- Spotify API Integration
+- Streamlit Dashboard
+- Real-time Song Recommendation
+- Deep Learning Autoencoders
+- Recommendation Engine
+- Genre Prediction
+
+---
+
+# Applications
+
+- Amazon Music
+- Spotify
+- YouTube Music
+- Apple Music
+- Personalized Playlist Generation
+- Music Recommendation Systems
+
+---
+
+# Author
+
+**Malaviga Ravi**
+
+MBA Business Analytics
+
+Python | SQL | Power BI | Machine Learning | Data Science
